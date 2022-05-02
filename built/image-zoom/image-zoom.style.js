@@ -4,7 +4,7 @@ var container = {
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
-    backgroundColor: 'transparent',
+    backgroundColor: 'transparent', // fix 0.36 bug, see: https://github.com/facebook/react-native/issues/10782
 };
 exports.default = {
     container: container,

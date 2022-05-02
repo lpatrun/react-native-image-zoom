@@ -3,10 +3,12 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
@@ -619,9 +621,9 @@ var ImageViewer = /** @class */ (function (_super) {
         return (<react_native_1.View style={__assign(__assign(__assign({}, image_zoom_style_1.default.container), parentStyles), { width: this.props.cropWidth, height: this.props.cropHeight })} {...this.imagePanResponder.panHandlers}>
         <react_native_1.Animated.View style={animateConf} renderToHardwareTextureAndroid={this.props.useHardwareTextureAndroid}>
           <react_native_1.View onLayout={this.handleLayout.bind(this)} style={{
-            width: this.props.imageWidth,
-            height: this.props.imageHeight,
-        }}>
+                width: this.props.imageWidth,
+                height: this.props.imageHeight,
+            }}>
             {this.props.children}
           </react_native_1.View>
         </react_native_1.Animated.View>
