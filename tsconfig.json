@@ -12,6 +12,5 @@
     "sourceMap": true,
     "skipLibCheck": true
   },
-  "exclude": ["node_modules"],
-  "include": ["./built/"]
+  "exclude": ["node_modules"]
 }
