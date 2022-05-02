@@ -11,7 +11,7 @@
     "outDir": "built",
     "sourceMap": true,
     "skipLibCheck": true,
-    "types": ["webrtc"]
+    "moduleResolution": "node"
   },
   "exclude": ["node_modules"]
 }
