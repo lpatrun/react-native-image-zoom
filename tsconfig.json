@@ -10,7 +10,8 @@
     "target": "es5",
     "outDir": "built",
     "sourceMap": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["webrtc"]
   },
   "exclude": ["node_modules"]
 }
